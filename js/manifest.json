@@ -1,17 +1,16 @@
 {
     "short_name": "River's Game",
     "name": "River's Game",
-    "start_url": "../index.html",
     "display": "standalone",
     "orientation": "landscape-primary",
     "icons": [
       {
-        "src": "./js/favicon.ico",
+        "src": "./favicon.ico",
         "type": "image/ico",
         "sizes": "192x192"
       },
       {
-        "src": "./js/favicon.ico",
+        "src": "./favicon.ico",
         "type": "image/ico",
         "sizes": "512x512"
       }
