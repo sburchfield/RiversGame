@@ -3,6 +3,18 @@
 <head>
 
 <title>Name Game</title>
+<script>
+	if('serviceWorker' in navigator) {
+	navigator.serviceWorker
+	.register('../sw.js')
+	.then(function() {
+		console.log("Service Worker registered successfully");
+	})
+	.catch(function() {
+		console.log("Service worker registration failed")
+	});
+	}
+</script>
 <script src="js/DragDropTouch.js"></script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">

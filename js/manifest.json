@@ -2,17 +2,5 @@
     "short_name": "River's Game",
     "name": "River's Game",
     "start_url": "../index.html",
-    "display": "standalone",
-    "icons": [
-      {
-        "src": "../images/red/A.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "../images/red/A.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ]
+    "display": "standalone"
   }
