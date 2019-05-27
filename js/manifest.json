@@ -3,7 +3,7 @@
     "name": "River's Game",
     "start_url": "../index.html",
     "display": "standalone",
-    ​​"orientation": "landscape",
+    ​​"orientation": "landscape-primary",
     "icons": [
       {
         "src": "../images/red/A.png",
