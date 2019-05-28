@@ -1,68 +1,21 @@
-@keyframes shake{
-    10%, 90% {
-    transform: translate3d(-6px, 3px, 3px);
-  }
-
-  20%, 80% {
-    transform: translate3d(9px, -4px, -4px);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-12px, 8px, 8px);
-  }
-
-  40%, 60% {
-    transform: translate3d(5px, -2px, -2px);
-  }
-}
-
-
-
-@-moz-keyframes rotatebox {
-
-    from{
-        -moz-transform:rotate(0deg);
-    }
-    to{
-        -moz-transform:rotate(360deg);
-    }
-
-}
-
-@-webkit-keyframes rotatebox{
-
-    from{
-        -webkit-transform:rotate(0deg);
-    }
-    to{
-        -webkit-transform:rotate(360deg);
-    }
-
-}
-
 body{
-	/* background-color:#188DEC; */
-  background-image: linear-gradient(#6db4ef, #188DEC);
-  /* padding: 2em 0 8em 0; */
+   background-image: linear-gradient(#6db4ef, #188DEC);
 	 font-family: arial;
    z-index: 1;
-   height: 100vh;
+   height: 100%;
    padding: 0;
    margin: 0;
 }
-
 
 [draggable] {
   cursor: move;
 }
 
-.nameWrapper{
-	padding-top: 25vh;
-}
-
 main{
+  box-sizing: border-box;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  /* padding: 2em 0; */
   background-image: url("../images/background.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -71,55 +24,29 @@ main{
   text-align: center;
 }
 
-#overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-	cursor: pointer; /* Add a pointer on hover */
-	display: block;
-}
-
-
 .names{
 	margin: 0 auto;
-	width: 80%;
-}
-
-#playPicture{
-	position: relative;
-	width: 20%;
-	margin: 0 auto 0 auto;
-	padding-top: 30em;
-  height: 10em;
-	background-image: url(../images/playbutton.png);
-	/* background-position: 1000px center; */
-	background-repeat: no-repeat;
-	background-size: contain;
-	z-index: 6;
+	width: 100%;
+  padding-top: 2em;
 }
 
 #mickeyPicture{
 	position: fixed;
 	width: 28%;
-	margin: -16vh 0 0 65vw;
+	margin: -10em 0 0 65vw;
 	background-image: url(../images/Mickey-Mouse-PNG.png);
 	height: 16em;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+  display: none;
 }
 
 #picture img{
+  position: relative;
   border-radius: 50%;
-  height: 40vh;
-  width: 40vh;
+  height: 50vh;
+  width: 50vh;
 }
 
 #hill{
@@ -130,51 +57,25 @@ main{
   height: 10vh;
   background-image: linear-gradient(#30D400, #28a600);
   border-top-right-radius: 350px;
-   transform: skew(50deg);
-   z-index: -1;
+  transform: skew(50deg);
+  display: none;
 }
 
 #hill2{
   position: fixed;
-  /* float: right; */
   bottom: 0;
   margin-left: 50vw;
   width: 60%;
   height: 6vh;
   background-image: linear-gradient(#30D400, #28a600);
   border-top-left-radius: 200px;
-   transform: skew(-50deg);
-   z-index: -1;
+  transform: skew(-50deg);
+  display: none;
 }
 
-
-#play{
-	width: 20%;
-	margin: 0 auto;
-}
-
-.button{
-	text-align: center;
-	border: 5px solid;
-	border-radius: 1.5em;
-	width: 10%;
-	margin: 0.5em auto 0 auto;
-	padding: 0.5em;
-	text-decoration: none;
-	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	font-size: 1.5em;
-	color: #FFFFFF;
-	background-color: #30D400;
-	border-color:#1A7400;
-	display: block;
-}
+@media only screen and (min-width: 1024px) {
 
 
-.goodjob{
-	position: absolute;
-	top: -5px;
-	left: -999px;
-	overflow: show;
 }
 
 @media only screen and (min-width: 1366px) {

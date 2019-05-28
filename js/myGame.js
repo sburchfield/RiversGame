@@ -99,22 +99,39 @@ function touchStart(e) {
 
 var dieRoll = rndNum (10,18);// get a random number between 10 and 20
 var nameNumber = rndNum (1,3);// get a random number between 1 and 3
-var Xcord0 = rndNum (25,700);
-var Ycord0 = rndNum (175,450);
-var Xcord1 = rndNum (25,700);
-var Ycord1 = rndNum (175,450);
-var Xcord2 = rndNum (25,700);
-var Ycord2 = rndNum (175,450);
-var Xcord3 = rndNum (25,700);
-var Ycord3 = rndNum (175,450);
-var Xcord4 = rndNum (25,700);
-var Ycord4 = rndNum (175,450);
-var Xcord5 = rndNum (25,700);
-var Ycord5 = rndNum (175,450);
-var Xcord6 = rndNum (25,700);
-var Ycord6 = rndNum (175,450);
-var Xcord7 = rndNum (25,700);
-var Ycord7 = rndNum (175,450);
+// var Xcord0 = rndNum (25,700);
+// var Ycord0 = rndNum (175,450);
+// var Xcord1 = rndNum (25,700);
+// var Ycord1 = rndNum (175,450);
+// var Xcord2 = rndNum (25,700);
+// var Ycord2 = rndNum (175,450);
+// var Xcord3 = rndNum (25,700);
+// var Ycord3 = rndNum (175,450);
+// var Xcord4 = rndNum (25,700);
+// var Ycord4 = rndNum (175,450);
+// var Xcord5 = rndNum (25,700);
+// var Ycord5 = rndNum (175,450);
+// var Xcord6 = rndNum (25,700);
+// var Ycord6 = rndNum (175,450);
+// var Xcord7 = rndNum (25,700);
+// var Ycord7 = rndNum (175,450);
+
+var Xcord0 = rndNum (25, 550);
+var Ycord0 = rndNum (75,270);
+var Xcord1 = rndNum (25, 550);
+var Ycord1 = rndNum (75,270);
+var Xcord2 = rndNum (25, 550);
+var Ycord2 = rndNum (75,270);
+var Xcord3 = rndNum (25, 550);
+var Ycord3 = rndNum (75,270);
+var Xcord4 = rndNum (25, 550);
+var Ycord4 = rndNum (75,270);
+var Xcord5 = rndNum (25, 550);
+var Ycord5 = rndNum (75,270);
+var Xcord6 = rndNum (25, 550);
+var Ycord6 = rndNum (75,270);
+var Xcord7 = rndNum (25, 550);
+var Ycord7 = rndNum (75,270);
 
 function rndNum(from, to){
 			return Math.floor((Math.random()*(to - from + 1)) + from);
