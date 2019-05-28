@@ -74,7 +74,11 @@ main{
 }
 
 @media only screen and (min-width: 1024px) {
-
+  .names{
+  	margin: 0 auto;
+  	width: 100%;
+    padding-top: 12em;
+  }
 
 }
 
@@ -85,6 +89,12 @@ main{
   	margin: -8vh 0 0 68vw;
   	background-image: url(../images/Mickey-Mouse-PNG.png);
   	height: 20em;
+  }
+
+  .names{
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 18em;
   }
 
 }
