@@ -47,7 +47,7 @@ var dragndrop = (function(){
 		draggableImage.setAttribute('id', 'letter' + i);
 		draggableImage.setAttribute('class', 'letters ' + name[i]  + " " + colors[i]);
 		draggableImage.setAttribute('draggable', 'true');
-		draggableImage.style ='position: absolute; left: '+ rndNum (25, screen.width - 100) +'px; top:'+ rndNum (75, screen.height - 100) +'px; z-index: 5;';
+		draggableImage.style ='position: absolute; left: '+ rndNum (25, screen.width - 100) +'px; top:'+ rndNum (75, screen.height - 125) +'px; z-index: 5;';
 		document.getElementById('wrapper').appendChild(draggableImage);
 
 		var picName = document.getElementById("picture");
