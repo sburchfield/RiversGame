@@ -47,6 +47,7 @@ var dragndrop = (function(){
 		draggableImage.setAttribute('id', 'letter' + i);
 		draggableImage.setAttribute('class', 'letters ' + name[i]  + " " + colors[i]);
 		draggableImage.setAttribute('draggable', 'true');
+		draggableImage.style ='position: absolute; left: '+ rndNum (25, screen.width - 100) +'px; top:'+ rndNum (75, screen.height - 100) +'px; z-index: 5;';
 		document.getElementById('wrapper').appendChild(draggableImage);
 
 		var picName = document.getElementById("picture");
@@ -99,39 +100,6 @@ function touchStart(e) {
 
 var dieRoll = rndNum (10,18);// get a random number between 10 and 20
 var nameNumber = rndNum (1,3);// get a random number between 1 and 3
-// var Xcord0 = rndNum (25,700);
-// var Ycord0 = rndNum (175,450);
-// var Xcord1 = rndNum (25,700);
-// var Ycord1 = rndNum (175,450);
-// var Xcord2 = rndNum (25,700);
-// var Ycord2 = rndNum (175,450);
-// var Xcord3 = rndNum (25,700);
-// var Ycord3 = rndNum (175,450);
-// var Xcord4 = rndNum (25,700);
-// var Ycord4 = rndNum (175,450);
-// var Xcord5 = rndNum (25,700);
-// var Ycord5 = rndNum (175,450);
-// var Xcord6 = rndNum (25,700);
-// var Ycord6 = rndNum (175,450);
-// var Xcord7 = rndNum (25,700);
-// var Ycord7 = rndNum (175,450);
-
-var Xcord0 = rndNum (25, 550);
-var Ycord0 = rndNum (75,225);
-var Xcord1 = rndNum (25, 550);
-var Ycord1 = rndNum (75,225);
-var Xcord2 = rndNum (25, 550);
-var Ycord2 = rndNum (75,225);
-var Xcord3 = rndNum (25, 550);
-var Ycord3 = rndNum (75,225);
-var Xcord4 = rndNum (25, 550);
-var Ycord4 = rndNum (75,225);
-var Xcord5 = rndNum (25, 550);
-var Ycord5 = rndNum (75,225);
-var Xcord6 = rndNum (25, 550);
-var Ycord6 = rndNum (75,225);
-var Xcord7 = rndNum (25, 550);
-var Ycord7 = rndNum (75,225);
 
 function rndNum(from, to){
 			return Math.floor((Math.random()*(to - from + 1)) + from);
@@ -143,28 +111,5 @@ function letterTest(){
 			}
 		}
 
-document.getElementById("letter0").style ='position: absolute; left: '+Xcord0+'px; top:'+Ycord0+'px; z-index: 5;';
-document.getElementById("letter1").style ='position: absolute; left: '+Xcord1+'px; top:'+Ycord1+'px; z-index: 5;';
-document.getElementById("letter2").style ='position: absolute; left: '+Xcord2+'px; top:'+Ycord2+'px; z-index: 5;';
-
-if(document.getElementById("letter3")){
-	document.getElementById("letter3").style ='position: absolute; left: '+Xcord3+'px; top:'+Ycord3+'px; z-index: 5;';
-}
-
-if(document.getElementById("letter4")){
-	document.getElementById("letter4").style ='position: absolute; left: '+Xcord4+'px; top:'+Ycord4+'px; z-index: 5;';
-}
-
-if(document.getElementById("letter5")){
-	document.getElementById("letter5").style ='position: absolute; left: '+Xcord5+'px; top:'+Ycord5+'px; z-index: 5;';
-}
-
-if(document.getElementById("letter6")){
-	document.getElementById("letter6").style ='position: absolute; left: '+Xcord6+'px; top:'+Ycord6+'px; z-index: 5;';
-}
-
-if(document.getElementById("letter7")){
-	document.getElementById("letter7").style ='position: absolute; left: '+Xcord7+'px; top:'+Ycord7+'px; z-index: 5;';
-}
 
 })();
