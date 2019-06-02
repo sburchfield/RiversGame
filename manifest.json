@@ -1,7 +1,7 @@
 {
     "short_name": "River's Game",
     "name": "River's Game",
-    "start_url": "./RiversGame/",
+    "start_url": "./",
     "display": "standalone",
     "orientation": "landscape-primary",
     "icons": [
