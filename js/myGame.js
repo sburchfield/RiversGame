@@ -1,10 +1,16 @@
-var myX = '';
-var myY = '';
-var whichArt = '';
-var letter = '';
-var test = 0;
-
 var dragndrop = (function(){
+	var myX = '';
+	var myY = '';
+	var whichArt = '';
+	var letter = '';
+	var test = 0;
+	var dieRoll = rndNum (10,18);// get a random number between 10 and 20
+	var names = ['mom', 'dad', 'dog', 'grandma', 'grandpa', 'mabel', 'nana', 'river', 'sam'];
+	var colors = ['red', 'yel', 'gre', 'pur', 'blu','red', 'yel', 'gre'];
+	var name = [];
+
+
+
 	function resetZ(){
 		var elements = document.querySelectorAll('img');
 		for (var i = elements.length - 1; i >= 0; i--){
@@ -27,34 +33,44 @@ var dragndrop = (function(){
 		return false;
 	}
 
-	var nameSelect = rndNum (0,8);
-	var picSelect = rndNum(1,3);
-	var names = ['mom', 'dad', 'dog', 'grandma', 'grandpa', 'mabel', 'nana', 'river', 'sam'];
-	var colors = ['red', 'yel', 'gre', 'pur', 'blu','red', 'yel', 'gre'];
-	var name = names[nameSelect].split('');
+	function createApp(){
 
-	for (i = 0; i < name.length; i++){
-		var dzImage = document.createElement('img');
-		dzImage.src = "images/gray/"+name[i].toUpperCase()+".png";
-		dzImage.setAttribute('id', 'dz' + i);
-		dzImage.setAttribute('class', name[i]);
-		document.getElementById('nameWrapper').appendChild(dzImage);
-		document.querySelector('#dz' + i).addEventListener('drop', moveDrop, false);
-		document.querySelector('#dz' + i).addEventListener('dragover', moveDragOver, false);
+		var nameSelect = rndNum (0,8);
+		name = names[nameSelect].split('');
+		var picSelect = rndNum(1,3);
 
-		var draggableImage = document.createElement('img');
-		draggableImage.src = "images/"+ colors[i] +"/"+name[i].toUpperCase()+".png";
-		draggableImage.setAttribute('id', 'letter' + i);
-		draggableImage.setAttribute('class', 'letters ' + name[i]  + " " + colors[i]);
-		draggableImage.setAttribute('draggable', 'true');
-		draggableImage.style ='position: absolute; left: '+ rndNum (25, screen.width - 125) +'px; top:'+ rndNum (75, screen.height - 150) +'px; z-index: 5;';
-		document.getElementById('wrapper').appendChild(draggableImage);
+		document.getElementById('wrapper').innerHTML = '';
 
-		var picName = document.getElementById("picture");
-		picName.innerHTML ='<img src="images/' + names[nameSelect] + picSelect +'.jpg" alt="picture" height="375" width="400">';
+		var nameWrapper = document.createElement('div');
+		nameWrapper.setAttribute('id', 'nameWrapper');
+		nameWrapper.setAttribute('class', 'names');
+		document.getElementById('wrapper').appendChild(nameWrapper);
+
+		for (i = 0; i < name.length; i++){
+			var dzImage = document.createElement('img');
+			dzImage.src = "images/gray/"+name[i].toUpperCase()+".png";
+			dzImage.setAttribute('id', 'dz' + i);
+			dzImage.setAttribute('class', name[i]);
+			document.getElementById('nameWrapper').appendChild(dzImage);
+			document.querySelector('#dz' + i).addEventListener('drop', moveDrop, false);
+			document.querySelector('#dz' + i).addEventListener('dragover', moveDragOver, false);
+
+			var draggableImage = document.createElement('img');
+			draggableImage.src = "images/"+ colors[i] +"/"+name[i].toUpperCase()+".png";
+			draggableImage.setAttribute('id', 'letter' + i);
+			draggableImage.setAttribute('class', 'letters ' + name[i]  + " " + colors[i]);
+			draggableImage.setAttribute('draggable', 'true');
+			draggableImage.style ='position: absolute; left: '+ rndNum (25, screen.width - 125) +'px; top:'+ rndNum (75, screen.height - 150) +'px; z-index: 5;';
+			document.getElementById('nameWrapper').appendChild(draggableImage);
+
+		}
+		var picDiv = document.createElement("div");
+		picDiv.innerHTML ='<img src="images/' + names[nameSelect] + picSelect +'.jpg" alt="picture" height="375" width="400">';
+		picDiv.setAttribute('id', 'picture');
+		document.getElementById('nameWrapper').appendChild(picDiv);
 	}
 
-	var classname = document.querySelectorAll('img.letters');
+	createApp();
 
 	function setLetterValue(){
 		window.character = this;
@@ -62,9 +78,12 @@ var dragndrop = (function(){
 		window.color = this.className[10] + this.className[11] + this.className[12];
 	}
 
+	var classname = document.querySelectorAll('img.letters');
+
 	for (var i = 0; i < classname.length; i++) {
 		classname[i].addEventListener('mousedown', setLetterValue);
 	}
+
 
 	function moveDrop(e){
 		e.preventDefault();
@@ -98,8 +117,7 @@ function touchStart(e) {
   }, false);
 } //end dragndrop
 
-var dieRoll = rndNum (10,18);// get a random number between 10 and 20
-var nameNumber = rndNum (1,3);// get a random number between 1 and 3
+
 
 function rndNum(from, to){
 			return Math.floor((Math.random()*(to - from + 1)) + from);
@@ -107,7 +125,8 @@ function rndNum(from, to){
 
 function letterTest(){
 		if(test == name.length){
-					location.reload();
+					location.reload()
+					// createApp();
 			}
 		}
 
