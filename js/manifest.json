@@ -1,17 +1,17 @@
 {
     "short_name": "River's Game",
     "name": "River's Game",
-    "start_url": "https://sburchfield.github.io/RiversGame/",
+    "start_url": "/",
     "display": "standalone",
     "orientation": "landscape-primary",
     "icons": [
       {
-        "src": "https://sburchfield.github.io/RiversGame/favicon.ico",
+        "src": "/favicon.ico",
         "type": "image/ico",
         "sizes": "192x192"
       },
       {
-        "src": "https://sburchfield.github.io/RiversGame/favicon.ico",
+        "src": "/favicon.ico",
         "type": "image/ico",
         "sizes": "512x512"
       }
