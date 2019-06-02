@@ -1,7 +1,7 @@
 {
     "short_name": "River's Game",
     "name": "River's Game",
-    "start_url": "https://sburchfield.github.io/RiversGame/l",
+    "start_url": "https://sburchfield.github.io/RiversGame/",
     "display": "standalone",
     "orientation": "landscape-primary",
     "icons": [
