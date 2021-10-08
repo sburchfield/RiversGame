@@ -4,7 +4,6 @@ var dragndrop = (function(){
 	var whichArt = '';
 	var letter = '';
 	var test = 0;
-	var dieRoll = rndNum (10,18);// get a random number between 10 and 20
 	var names = ['mom', 'dad', 'dog', 'grandma', 'grandpa', 'mabel', 'nana', 'river', 'sam'];
 	var colors = ['red', 'yel', 'gre', 'pur', 'blu','red', 'yel', 'gre'];
 	var name = [];
@@ -60,7 +59,7 @@ var dragndrop = (function(){
 			draggableImage.setAttribute('id', 'letter' + i);
 			draggableImage.setAttribute('class', 'letters ' + name[i]  + " " + colors[i]);
 			draggableImage.setAttribute('draggable', 'true');
-			draggableImage.style ='position: absolute; left: '+ rndNum (25, screen.width - 125) +'px; top:'+ rndNum (75, screen.height - 150) +'px; z-index: 5;';
+			draggableImage.style ='position: absolute; left: '+ rndNum (50, screen.width - 300) +'px; top:'+ rndNum (75, screen.height - 300) +'px; z-index: 5;';
 			document.getElementById('nameWrapper').appendChild(draggableImage);
 
 		}
